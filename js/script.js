@@ -1,32 +1,5 @@
-// --- 0. FUNCIÓN DE ACCESO CON CONTRASEÑA (NUEVA FUNCIÓN) ---
-window.accessDataAtletas = (event) => {
-    // Evita la navegación predeterminada del enlace o botón
-    event.preventDefault(); 
-
-    // Las credenciales requeridas
-    const requiredUser = "admin";
-    const requiredPass = "Volei2025";
-    
-    // 1. Solicitar Usuario
-    const user = prompt("Ingrese su Usuario:");
-
-    if (user === null || user.trim() !== requiredUser) {
-        alert("Usuario incorrecto o cancelado.");
-        return; 
-    }
-
-    // 2. Solicitar Contraseña
-    const password = prompt("Ingrese la Contraseña:");
-
-    // 3. Validar
-    if (password === requiredPass) {
-        // Contraseña Válida: Redirigir al archivo en la carpeta especificada
-        window.location.href = 'dataatletas/atletas_edit.html';
-    } else if (password !== null) {
-        // Contraseña Inválida (no cancelada)
-        alert("La contraseña es incorrecta");
-    }
-};
+// Este script NO contiene la función window.accessDataAtletas. 
+// Esa función fue implementada directamente en index.html para asegurar el funcionamiento del prompt.
 
 
 // --- 1. CONFIGURACIÓN DE FIREBASE ---
