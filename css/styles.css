@@ -1,9 +1,9 @@
 /* --- VARIABLES DE COLOR (Tema Azul Oscuro/Profesional) --- */
 :root {
-    --primary-color: #0D47A1; /* Azul AVEL (Oscuro) */
+    --primary-color: #002D62; /* Azul Muy Oscuro (Fondo AVEL) */
     --secondary-color: #1565C0; /* Azul Secundario */
     --accent-color: #FFC107; /* Amarillo/Dorado (Acento) */
-    --text-light: #FFFFFF;
+    --text-light: #FFFFFF; /* Blanco para texto general */
     --text-dark: #212121;
     --bg-light: #F5F5F5;
 }
@@ -28,25 +28,25 @@ body {
     margin: auto;
 }
 
-/* --- ENCABEZADO (HEADER) - IMPLEMENTACIÓN DE DOS LÍNEAS --- */
+/* --- ENCABEZADO (HEADER) --- */
 
 .main-header {
     background: var(--primary-color); 
     padding: 0; 
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); /* Sombra más oscura */
 }
 
 .header-top {
     /* Contenedor de la primera línea (Logo) */
     display: flex;
-    justify-content: flex-start; /* AVEL a la izquierda */
+    justify-content: flex-start;
     padding: 15px 0;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.15); /* Separador sutil */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
 }
 
 .logo {
     font-size: 1.8rem;
-    color: var(--accent-color); /* Amarillo/Dorado para el logo */
+    color: var(--text-light); /* Logo en BLANCO */
     font-weight: 700;
     margin: 0;
 }
@@ -54,32 +54,31 @@ body {
 .header-bottom {
     /* Contenedor de la segunda línea (Menú) */
     display: flex;
-    justify-content: center; /* Centra el menú */
-    padding: 0; /* Ya tenemos padding en los links */
+    justify-content: center;
+    padding: 0;
 }
 
-/* --- MENÚ DE NAVEGACIÓN --- */
+/* --- MENÚ DE NAVEGACIÓN (AJUSTE DE ESPACIO) --- */
 
 .nav-menu {
     list-style: none;
     display: flex;
     padding: 0;
     margin: 0;
-    width: 100%; /* Asegura que la lista ocupe el ancho disponible para el centrado */
+    width: auto; /* Dejamos que el ancho se ajuste al contenido para centrar */
 }
 
 .nav-menu li {
-    /* Define el tamaño uniforme para todos los botones */
-    flex-grow: 1; /* Permite que los elementos crezcan para llenar el espacio */
-    min-width: 100px; /* Asegura un tamaño base */
+    /* Eliminamos flex-grow para que solo se use el padding del link */
+    /* Quitamos 'min-width' para que los links estén más cerca */
     text-align: center;
 }
 
 .nav-menu a {
-    /* Estilos del enlace (botón) */
+    /* Reducimos el padding horizontal para acercar los links */
     display: block; 
-    padding: 12px 15px; 
-    color: var(--text-light);
+    padding: 12px 10px; /* Reducción de 15px a 10px */
+    color: var(--text-light); /* Texto del menú en BLANCO */
     text-decoration: none;
     font-size: 1rem;
     font-weight: 500;
@@ -92,11 +91,11 @@ body {
     color: var(--accent-color); 
 }
 
-/* --- SECCIÓN HERO --- */
+/* --- SECCIÓN HERO (Se ajusta el color del texto a BLANCO ya que el fondo del Hero es Azul Secundario) --- */
 
 .hero {
     background: var(--secondary-color); 
-    color: var(--text-light);
+    color: var(--text-light); /* Texto general del Hero en BLANCO */
     padding: 60px 0;
     text-align: center;
 }
@@ -172,7 +171,7 @@ body {
 
 /* --- SECCIÓN ACERCA DE --- */
 .about-section {
-    background-color: #E3F2FD; /* Azul muy claro */
+    background-color: #E3F2FD; 
     padding: 50px 0;
     text-align: center;
 }
@@ -196,10 +195,10 @@ body {
     opacity: 0.7;
 }
 
-/* --- MEDIA QUERIES (Para hacer el menú responsivo) --- */
+/* --- MEDIA QUERIES --- */
 @media (max-width: 768px) {
     .header-top {
-        justify-content: center; /* Centrar logo en móvil */
+        justify-content: center;
     }
 
     .header-bottom {
@@ -207,7 +206,7 @@ body {
     }
 
     .nav-menu {
-        flex-direction: column; /* Apilar elementos en móvil */
+        flex-direction: column;
         width: 100%;
     }
 
