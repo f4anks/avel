@@ -68,6 +68,37 @@
         </div>
     </footer>
     
+    <script>
+        window.accessDataAtletas = (event) => {
+            // Evita la navegación predeterminada del enlace o botón
+            event.preventDefault(); 
+
+            // Las credenciales requeridas
+            const requiredUser = "admin";
+            const requiredPass = "Volei2025";
+            
+            // 1. Solicitar Usuario
+            const user = prompt("Ingrese su Usuario:");
+
+            if (user === null || user.trim() !== requiredUser) {
+                alert("Usuario incorrecto o cancelado.");
+                return; 
+            }
+
+            // 2. Solicitar Contraseña
+            const password = prompt("Ingrese la Contraseña:");
+
+            // 3. Validar
+            if (password === requiredPass) {
+                // Contraseña Válida: Redirigir a la ruta dataatletas/atletas_edit.html
+                window.location.href = 'dataatletas/atletas_edit.html';
+            } else if (password !== null) {
+                // Contraseña Inválida (no cancelada)
+                alert("La contraseña es incorrecta");
+            }
+        };
+    </script>
+    
     <script src="js/script.js"></script> 
 </body>
 </html>
