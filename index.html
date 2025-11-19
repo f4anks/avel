@@ -10,18 +10,19 @@
 <body>
 
     <header class="main-header">
-        <div class="container nav-bar">
+                <div class="container header-top">
             <h1 class="logo">AVEL</h1>
-            <nav>
-                <ul class="nav-menu">
-                    <li><a href="index.html" class="active">Inicio</a></li>
-                    <li><a href="#ciar">CIAR</a></li>
-                                        <li><a href="#" onclick="accessDataAtletas(event)">Data Atletas</a></li> 
-                    <li><a href="data-entrenadores.html">Data Entrenadores</a></li>
-                    <li><a href="#acerca-de">Acerca de</a></li>
-                </ul>
-            </nav>
         </div>
+    
+                <nav class="container header-bottom">
+            <ul class="nav-menu">
+                <li><a href="index.html" class="active">Inicio</a></li>
+                <li><a href="#ciar">CIAR</a></li>
+                                <li><a href="#" onclick="accessDataAtletas(event)">Data Atletas</a></li> 
+                <li><a href="data-entrenadores.html">Data Entrenadores</a></li>
+                <li><a href="#acerca-de">Acerca de</a></li>
+            </ul>
+        </nav>
     </header>
 
     <section class="hero">
@@ -70,14 +71,10 @@
     
     <script>
         window.accessDataAtletas = (event) => {
-            // Evita la navegación predeterminada del enlace o botón
             event.preventDefault(); 
-
-            // Las credenciales requeridas
             const requiredUser = "admin";
             const requiredPass = "Volei2025";
             
-            // 1. Solicitar Usuario
             const user = prompt("Ingrese su Usuario:");
 
             if (user === null || user.trim() !== requiredUser) {
@@ -85,15 +82,11 @@
                 return; 
             }
 
-            // 2. Solicitar Contraseña
             const password = prompt("Ingrese la Contraseña:");
 
-            // 3. Validar
             if (password === requiredPass) {
-                // Contraseña Válida: Redirigir a la ruta dataatletas/atletas_edit.html
                 window.location.href = 'dataatletas/atletas_edit.html';
             } else if (password !== null) {
-                // Contraseña Inválida (no cancelada)
                 alert("La contraseña es incorrecta");
             }
         };
