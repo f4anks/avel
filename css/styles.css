@@ -1,15 +1,14 @@
-/* --- Variables de Color (Basado en Azul Oscuro/Profesional) --- */
+/* --- VARIABLES DE COLOR (Tema Azul Oscuro/Profesional) --- */
 :root {
-    --color-primary: #192A56; /* Azul Oscuro (Marino Profundo) - Fondo Principal */
-    --color-secondary: #2C3A5A; /* Azul Oscuro Ligeramente más Claro - Barras/Tarjetas */
-    --color-accent: #3498DB; /* Azul Brillante/Celeste - Llamada a la Acción/Botones */
-    --color-light: #F4F4F4; /* Color de Fondo Base */
-    --color-white: #FFFFFF;
-    --color-dark: #333333; /* Color de Texto Oscuro */
-    --padding-base: 20px;
+    --primary-color: #0D47A1; /* Azul AVEL (Oscuro) */
+    --secondary-color: #1565C0; /* Azul Secundario */
+    --accent-color: #FFC107; /* Amarillo/Dorado (Acento) */
+    --text-light: #FFFFFF;
+    --text-dark: #212121;
+    --bg-light: #F5F5F5;
 }
 
-/* --- Estilos Generales --- */
+/* --- ESTILOS BASE Y GENERALES --- */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -17,172 +16,207 @@
 }
 
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
-    background-color: var(--color-light);
-    color: var(--color-dark);
+    color: var(--text-dark);
+    background-color: var(--bg-light);
 }
 
 .container {
+    width: 90%;
     max-width: 1200px;
     margin: auto;
-    padding: 0 var(--padding-base);
 }
 
-a {
-    text-decoration: none;
-    color: var(--color-accent);
-}
+/* --- ENCABEZADO (HEADER) - IMPLEMENTACIÓN DE DOS LÍNEAS --- */
 
-/* --- 1. Encabezado y Navegación --- */
 .main-header {
-    background: var(--color-primary);
-    color: var(--color-white);
-    padding: var(--padding-base) 0;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    background: var(--primary-color); 
+    padding: 0; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-.nav-bar {
+.header-top {
+    /* Contenedor de la primera línea (Logo) */
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    justify-content: flex-start; /* AVEL a la izquierda */
+    padding: 15px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15); /* Separador sutil */
 }
 
 .logo {
     font-size: 1.8rem;
-    color: var(--color-white);
+    color: var(--accent-color); /* Amarillo/Dorado para el logo */
+    font-weight: 700;
+    margin: 0;
 }
+
+.header-bottom {
+    /* Contenedor de la segunda línea (Menú) */
+    display: flex;
+    justify-content: center; /* Centra el menú */
+    padding: 0; /* Ya tenemos padding en los links */
+}
+
+/* --- MENÚ DE NAVEGACIÓN --- */
 
 .nav-menu {
     list-style: none;
     display: flex;
+    padding: 0;
+    margin: 0;
+    width: 100%; /* Asegura que la lista ocupe el ancho disponible para el centrado */
 }
 
-.nav-menu li a {
-    color: var(--color-white);
-    padding: 10px 15px;
-    display: block;
-    transition: background 0.3s;
-}
-
-.nav-menu li a:hover,
-.nav-menu li .active {
-    background-color: var(--color-secondary);
-    border-radius: 5px;
-}
-
-/* --- 2. Sección Principal / Hero --- */
-.hero {
-    background: var(--color-secondary);
-    color: var(--color-white);
-    padding: 100px 0;
+.nav-menu li {
+    /* Define el tamaño uniforme para todos los botones */
+    flex-grow: 1; /* Permite que los elementos crezcan para llenar el espacio */
+    min-width: 100px; /* Asegura un tamaño base */
     text-align: center;
-    border-bottom: 5px solid var(--color-accent);
+}
+
+.nav-menu a {
+    /* Estilos del enlace (botón) */
+    display: block; 
+    padding: 12px 15px; 
+    color: var(--text-light);
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.nav-menu a:hover,
+.nav-menu a.active {
+    background-color: var(--secondary-color); 
+    color: var(--accent-color); 
+}
+
+/* --- SECCIÓN HERO --- */
+
+.hero {
+    background: var(--secondary-color); 
+    color: var(--text-light);
+    padding: 60px 0;
+    text-align: center;
 }
 
 .hero-content h2 {
-    font-size: 3rem;
+    font-size: 2.5rem;
     margin-bottom: 20px;
-    color: var(--color-accent); /* Título llamativo */
+    color: var(--accent-color); 
 }
 
 .hero-content p {
-    font-size: 1.4rem;
-    margin-bottom: 40px;
-    max-width: 900px;
-    margin-left: auto;
-    margin-right: auto;
+    font-size: 1.1rem;
+    margin-bottom: 30px;
 }
 
-/* --- Botones --- */
+/* --- BOTONES --- */
+
 .btn {
     display: inline-block;
-    padding: 15px 30px;
-    font-weight: bold;
-    border-radius: 50px; /* Botones redondeados para un look moderno */
-    margin: 10px;
-    transition: background-color 0.3s, transform 0.2s;
+    padding: 10px 20px;
+    margin: 5px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 600;
+    transition: background-color 0.3s, opacity 0.3s;
+    border: none;
+    cursor: pointer;
 }
 
 .btn-primary {
-    background: var(--color-accent);
-    color: var(--color-primary);
-    border: none;
+    background-color: var(--accent-color);
+    color: var(--primary-color);
 }
 
 .btn-primary:hover {
-    background: #5DADE2; /* Tono más claro al pasar el mouse */
-    transform: translateY(-2px);
+    opacity: 0.9;
 }
 
 .btn-secondary {
-    background: none;
-    color: var(--color-white);
-    border: 2px solid var(--color-white);
+    background-color: transparent;
+    color: var(--text-light);
+    border: 2px solid var(--text-light);
 }
 
 .btn-secondary:hover {
-    background: var(--color-white);
-    color: var(--color-primary);
+    background-color: rgba(255, 255, 255, 0.1);
 }
 
-/* --- 3. Sección Misión Persuasiva --- */
+/* --- SECCIÓN MISIÓN/VISIÓN --- */
+
 .mision-vision {
-    padding: 80px 0;
+    padding: 40px 0;
     text-align: center;
 }
 
 .grid-3 {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 30px;
+    display: flex;
+    gap: 20px;
 }
 
 .card {
-    background: var(--color-white);
-    padding: 35px;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    border-top: 5px solid var(--color-accent);
-    transition: transform 0.3s;
-}
-
-.card:hover {
-    transform: translateY(-5px);
+    flex: 1;
+    background: var(--text-light);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .card h3 {
-    color: var(--color-primary);
+    color: var(--primary-color);
     margin-bottom: 10px;
-    font-size: 1.5rem;
 }
 
-/* --- 4. Sección Acerca de --- */
+/* --- SECCIÓN ACERCA DE --- */
 .about-section {
-    padding: 60px 0;
-    background: #E8EBF0;
+    background-color: #E3F2FD; /* Azul muy claro */
+    padding: 50px 0;
     text-align: center;
 }
 
 .about-section h3 {
-    color: var(--color-primary);
-    margin-bottom: 15px;
+    color: var(--primary-color);
+    margin-bottom: 20px;
 }
 
-/* --- 5. Pie de Página --- */
+/* --- FOOTER --- */
 .main-footer {
-    background: var(--color-primary);
-    color: var(--color-white);
+    background: var(--primary-color);
+    color: var(--text-light);
+    padding: 20px 0;
     text-align: center;
-    padding: var(--padding-base) 0;
     font-size: 0.9rem;
 }
 
-.main-footer .container p {
-    margin: 5px 0;
+.copyright-info {
+    margin-top: 5px;
+    opacity: 0.7;
 }
 
-.copyright-info {
-    color: var(--color-accent); /* Resaltar la autoría */
-    font-weight: bold;
+/* --- MEDIA QUERIES (Para hacer el menú responsivo) --- */
+@media (max-width: 768px) {
+    .header-top {
+        justify-content: center; /* Centrar logo en móvil */
+    }
+
+    .header-bottom {
+        padding: 5px 0;
+    }
+
+    .nav-menu {
+        flex-direction: column; /* Apilar elementos en móvil */
+        width: 100%;
+    }
+
+    .nav-menu li {
+        min-width: 100%; 
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    
+    .grid-3 {
+        flex-direction: column;
+    }
 }
