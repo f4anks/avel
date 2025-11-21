@@ -40,23 +40,26 @@ body {
 
 .header-top {
     display: flex;
-    align-items: center; /* CENTRA VERTICALMENTE */
-    justify-content: center; /* Centra horizontalmente el banner */
-    padding: 0; /* Ajustado para el banner */
+    align-items: center; 
+    justify-content: center; 
+    padding: 0; 
     border-bottom: 1px solid rgba(255, 255, 255, 0.15);
 }
 
 /* NUEVO ESTILO: Contenedor del banner superior */
 .top-banner {
-    width: 100%; /* El banner ocupa todo el ancho disponible */
-    text-align: center; /* Centra la imagen dentro del contenedor */
+    width: 100%; 
+    text-align: center; 
 }
 
 .top-banner img {
-    max-width: 100%; /* Asegura que el banner sea responsivo */
-    height: auto; /* Mantiene la proporción de la imagen */
-    display: block; /* Elimina espacio extra debajo de la imagen */
-    margin: 0 auto; /* Centra la imagen si es más pequeña que el contenedor */
+    max-width: 100%; 
+    height: auto; 
+    /* MODIFICACIÓN: Aumento de la altura máxima para el banner */
+    max-height: 120px; 
+    width: auto; 
+    display: block; 
+    margin: 0 auto; 
 }
 
 .header-bottom {
@@ -206,12 +209,9 @@ body {
 @media (max-width: 768px) {
     .header-top {
         justify-content: center; 
-        flex-direction: column; /* Aseguramos que el banner se apile si hay otros elementos, aunque ahora es el único */
+        flex-direction: column; 
         padding: 10px 0;
     }
-
-    /* Ya no necesitamos estos estilos ya que el logo y título fueron eliminados */
-    /* .header-title { ... } */
 
     .header-bottom {
         padding: 5px 0;
