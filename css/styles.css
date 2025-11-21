@@ -40,8 +40,8 @@ body {
 .header-top {
     display: flex;
     align-items: center; 
-    justify-content: center; /* <--- SOLUCIÓN SEGURA: CENTRADO HORIZONTAL */
-    padding: 1px 0; 
+    justify-content: center; /* Centrado horizontal del logo y título */
+    padding: 5px 0; /* Padding corregido a 5px para espaciado */
     border-bottom: 1px solid rgba(255, 255, 255, 0.15);
 }
 
@@ -54,7 +54,7 @@ body {
 
 /* AJUSTE: ESTILO PARA LA IMAGEN DEL LOGO */
 .logo img#mainLogo {
-    height: 150px; /* TAMAÑO SOLICITADO */
+    height: 80px; /* <--- AJUSTADO A 80px para corregir desbordamiento */
     width: auto;
     vertical-align: middle; 
 }
@@ -62,9 +62,9 @@ body {
 /* NUEVO ESTILO: Título al lado del logo */
 .header-title {
     color: var(--text-light); 
-    font-size: 2.2rem; 
+    font-size: 2rem; /* Tamaño de fuente ajustado al nuevo logo */
     font-weight: 600;
-    margin-left: 5px; 
+    margin-left: 10px; /* Espacio entre el logo y el texto */
     line-height: 1.2; 
 }
 
