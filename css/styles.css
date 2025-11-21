@@ -40,22 +40,22 @@ body {
 .header-top {
     display: flex;
     justify-content: flex-start;
-    padding: 10px 0; /* Ajuste de altura */
+    padding: 10px 0; 
     border-bottom: 1px solid rgba(255, 255, 255, 0.15);
 }
 
 .logo {
     font-size: 1.8rem;
-    color: var(--text-light); /* Texto que ahora es la imagen */
+    color: var(--text-light); 
     font-weight: 700;
     margin: 0;
 }
 
-/* NUEVO: ESTILO PARA LA IMAGEN DEL LOGO */
+/* AJUSTE: ESTILO PARA LA IMAGEN DEL LOGO */
 .logo img#mainLogo {
-    height: 35px; /* Altura del logo */
+    height: 50px; /* <= AUMENTADO: Logo más grande */
     width: auto;
-    vertical-align: middle; /* Alineación vertical */
+    vertical-align: middle; 
 }
 
 .header-bottom {
