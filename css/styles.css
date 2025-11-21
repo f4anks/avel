@@ -32,16 +32,16 @@ body {
 /* --- ENCABEZADO (HEADER) --- */
 
 .main-header {
-    background: var(--primary-color); /* Aseguramos el fondo principal para el header completo */
+    background: var(--primary-color); 
     padding: 0; 
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); 
 }
 
 .header-top {
     display: flex;
-    align-items: center; 
+    align-items: center; /* CENTRA VERTICALMENTE LOGO Y TEXTO */
     justify-content: flex-start;
-    padding: 5px 0;  /* AJUSTADO a un tamaño razonable para el logo de 60px */
+    padding: 1px 0;  /* <= AJUSTE PARA PEGAR AL BORDE SUPERIOR */
     border-bottom: 1px solid rgba(255, 255, 255, 0.15);
 }
 
@@ -54,7 +54,7 @@ body {
 
 /* AJUSTE: ESTILO PARA LA IMAGEN DEL LOGO */
 .logo img#mainLogo {
-    height: 60px; /* <= CORREGIDO: Tamaño más compacto */
+    height: 200px; /* <= NUEVO TAMAÑO DEL LOGO: 200px */
     width: auto;
     vertical-align: middle; 
 }
@@ -62,16 +62,13 @@ body {
 /* NUEVO ESTILO: Título al lado del logo */
 .header-title {
     color: var(--text-light); /* Color blanco */
-    font-size: 1.5rem; /* TAMAÑO AJUSTADO para el logo de 60px */
+    font-size: 2.2rem; /* Tamaño grande para acompañar al logo */
     font-weight: 600;
-    margin-left: 15px; /* Espacio entre el logo y el texto */
-    line-height: 1.2; 
+    margin-left: 2px; /* Espacio entre el logo y el texto */
+    line-height: 1.2; /* Para mejor ajuste vertical */
 }
 
 .header-bottom {
-    /* Quitamos el background-color de aquí si queremos que siga el color de .main-header,
-    o lo ponemos si queremos que el menú tenga un color secundario, como antes: */
-    background-color: transparent; /* Dejamos que herede el azul oscuro de main-header */
     display: flex;
     justify-content: center;
     padding: 0;
@@ -217,19 +214,16 @@ body {
 /* --- MEDIA QUERIES --- */
 @media (max-width: 768px) {
     .header-top {
-        justify-content: flex-start; 
-        flex-direction: row; /* CORREGIDO: volvemos a ponerlos en línea para que quepa */
-        padding: 5px 0;
-        /* Reducimos el logo para móvil */
-        .logo img#mainLogo {
-            height: 45px;
-        }
+        /* Centramos el logo y el texto en móvil para evitar desbordamiento */
+        justify-content: center; 
+        flex-direction: column; /* Apilamos logo y texto en móvil */
+        padding: 10px 0;
     }
 
     .header-title {
-        font-size: 1rem; /* Reducimos el tamaño en móvil */
-        margin-left: 10px;
-        margin-top: 0;
+        font-size: 1.5rem; /* Reducimos el tamaño en móvil */
+        margin-left: 0;
+        margin-top: 5px;
     }
 
     .header-bottom {
