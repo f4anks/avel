@@ -40,7 +40,7 @@ body {
 .header-top {
     display: flex;
     align-items: center; 
-    justify-content: center; /* Centrado horizontal del logo */
+    justify-content: center; /* ESTO CENTRA EL LOGO HORIZONTALMENTE */
     padding: 5px 0; 
     border-bottom: 1px solid rgba(255, 255, 255, 0.15);
 }
@@ -54,7 +54,7 @@ body {
 
 /* AJUSTE: ESTILO PARA LA IMAGEN DEL LOGO */
 .logo img#mainLogo {
-    height: 60px; /* TAMAÑO AJUSTADO PARA EVITAR DESBORDE */
+    height: 60px; /* TAMAÑO AJUSTADO A 60px */
     width: auto;
     vertical-align: middle; 
 }
