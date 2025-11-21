@@ -40,7 +40,7 @@ body {
 .header-top {
     display: flex;
     align-items: center; 
-    justify-content: center; /* <--- CAMBIO CLAVE: CENTRADO HORIZONTAL */
+    justify-content: center; /* <--- SOLUCIÓN SEGURA: CENTRADO HORIZONTAL */
     padding: 1px 0; 
     border-bottom: 1px solid rgba(255, 255, 255, 0.15);
 }
@@ -54,7 +54,7 @@ body {
 
 /* AJUSTE: ESTILO PARA LA IMAGEN DEL LOGO */
 .logo img#mainLogo {
-    height: 150px; /* Tamaño que solicitaste */
+    height: 150px; /* TAMAÑO SOLICITADO */
     width: auto;
     vertical-align: middle; 
 }
