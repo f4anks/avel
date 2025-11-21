@@ -53,7 +53,7 @@ body {
 
 /* AJUSTE: ESTILO PARA LA IMAGEN DEL LOGO */
 .logo img#mainLogo {
-    height: 80px; /* <= AUMENTADO: Logo más grande */
+    height: 120px; /* <= AUMENTADO: Logo más grande */
     width: auto;
     vertical-align: middle; 
 }
@@ -225,4 +225,5 @@ body {
         flex-direction: column;
     }
 }
+
 
