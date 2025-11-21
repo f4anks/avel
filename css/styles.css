@@ -82,7 +82,7 @@ body {
 
     align-items: center; /* CENTRA VERTICALMENTE LOGO Y TEXTO */
 
-    justify-content: flex-start; /* Alinea a la izquierda */
+    justify-content: flex-start;
 
     padding: 1px 0; 
 
