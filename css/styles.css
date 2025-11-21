@@ -1,9 +1,12 @@
+/* [Código CSS de la versión 60px Centrado] */
+/* ASEGÚRATE DE QUE TU ARCHIVO styles.css CONTENGA EXACTAMENTE ESTO */
+
 /* --- VARIABLES DE COLOR (Tema Azul Oscuro/Profesional con Vibrante) --- */
 :root {
-    --primary-color: #002D62; /* Azul Muy Oscuro (Fondo AVEL) */
-    --secondary-color: #1565C0; /* Azul Secundario */
-    --accent-color: #FFC107; /* Amarillo/Dorado (Acento) */
-    --vibrant-blue: #00BFFF; /* AZUL LLAMATIVO/CLARO (Sky Blue / Escandaloso) */
+    --primary-color: #002D62;
+    --secondary-color: #1565C0;
+    --accent-color: #FFC107;
+    --vibrant-blue: #00BFFF;
     --text-light: #FFFFFF;
     --text-dark: #212121;
     --bg-light: #F5F5F5;
@@ -40,7 +43,7 @@ body {
 .header-top {
     display: flex;
     align-items: center; 
-    justify-content: center; /* ESTO CENTRA EL LOGO HORIZONTALMENTE */
+    justify-content: center; /* CENTRADO HORIZONTAL */
     padding: 5px 0; 
     border-bottom: 1px solid rgba(255, 255, 255, 0.15);
 }
@@ -54,12 +57,12 @@ body {
 
 /* AJUSTE: ESTILO PARA LA IMAGEN DEL LOGO */
 .logo img#mainLogo {
-    height: 60px; /* TAMAÑO AJUSTADO A 60px */
+    height: 150px; /* TAMAÑO PEQUEÑO */
     width: auto;
     vertical-align: middle; 
 }
 
-/* ESTILO OCULTO: Título (por si quieres recuperarlo, pero ahora está vacío) */
+/* ESTILO OCULTO: Título */
 .header-title {
     color: var(--text-light); 
     font-size: 2rem; 
@@ -104,7 +107,7 @@ body {
     color: var(--accent-color); 
 }
 
-/* --- SECCIÓN HERO --- */
+/* --- SECCIÓN HERO y demás secciones ... --- */
 
 .hero {
     background: var(--secondary-color); 
