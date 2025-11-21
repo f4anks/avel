@@ -144,7 +144,7 @@ body {
 /* --- SECCIÓN MISIÓN/VISIÓN (AJUSTE DE ALTURA) --- */
 
 .mision-vision {
-    padding: 20px 0; /* <= ALTURA REDUCIDA (de 40px a 20px) */
+    padding: 10px 0; /* <= ALTURA REDUCIDA (de 40px a 10px) */
     text-align: center;
 }
 
@@ -156,7 +156,7 @@ body {
 .card {
     flex: 1;
     background: var(--text-light);
-    padding: 15px; /* <= ALTURA INTERNA REDUCIDA (de 20px a 15px) */
+    padding: 10px; /* <= ALTURA INTERNA REDUCIDA (de 20px a 10px) */
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
@@ -218,6 +218,7 @@ body {
         flex-direction: column;
     }
 }
+
 
 
 
