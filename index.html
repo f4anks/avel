@@ -3,9 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AVEL | Asociación de Voleibol del Estado Lara</title>
-    <link rel="stylesheet" href="css/styles.css?v=1.5"> 
+    <title>AVEL | Data Entrenadores</title>
+    <link rel="stylesheet" href="css/styles.css"> 
+    <link rel="stylesheet" href="css/bootstrap.min.css"> 
     <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <style>
+        /* Estilos de compatibilidad para el tema Azul */
+        .page-content {
+            padding: 30px 0;
+            min-height: 70vh; 
+        }
+        .section-header {
+            color: var(--primary-color);
+            border-bottom: 2px solid var(--accent-color);
+            padding-bottom: 5px;
+            margin-bottom: 20px;
+        }
+        /* Estilos de tabla adaptados al tema */
+        .table-striped tbody tr:nth-of-type(odd) {
+            background-color: var(--bg-light); /* Fondo claro */
+        }
+        .table th {
+            background-color: var(--secondary-color);
+            color: var(--text-light);
+            cursor: pointer;
+        }
+        .table-hover tbody tr:hover {
+            background-color: #A0C4FF; /* Tono de azul claro al pasar el ratón */
+        }
+        .bg-primary {
+             background-color: var(--primary-color) !important;
+        }
+        .text-light {
+             color: var(--text-light) !important;
+        }
+    </style>
 </head>
 <body>
 
@@ -19,48 +51,97 @@
         
         <nav class="container header-bottom">
             <ul class="nav-menu">
-                <li><a href="index.html" class="active">Inicio</a></li>
+                <li><a href="index.html">Inicio</a></li>
                 <li><a href="#ciar">CIAR</a></li>
-                <li><a href="#" onclick="accessDataAtletas(event)">Data Atletas</a></li>
-                <li><a href="data-entrenadores.html">Data Entrenadores</a></li>
+                <li><a href="#" onclick="accessDataAtletas(event)">Data Atletas</a></li> 
+                <li><a href="data-entrenadores.html" class="active">Data Entrenadores</a></li>
                 <li><a href="#acerca-de">Acerca de</a></li>
             </ul>
         </nav>
     </header>
 
-    <section class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <h2>El Corazón del Voleibol Larense</h2>
-                
-                <p>Sé parte de la **Asociación de Voleibol del Estado Lara (AVEL)**. Impulsamos el desarrollo integral de atletas y la capacitación continua de entrenadores. Únete a la excelencia, disciplina y pasión que definen el futuro de nuestro deporte.</p>
-            </div>
-        </div>
-    </section>
+    <main class="page-content container">
+        <h2 class="section-header">Registro y Gestión de Entrenadores</h2>
 
-    <section class="mision-vision">
-        <div class="container grid-3">
-            <div class="card">
-                <h3>Organización</h3>
-                <p>Gestionamos de manera eficiente la data de atletas y entrenadores para el desarrollo deportivo.</p>
-            </div>
-            <div class="card">
-                <h3>Visión</h3>
-                <p>Ser la asociación deportiva modelo a nivel nacional por nuestra gestión y éxito competitivo.</p>
-            </div>
-            <div class="card">
-                <h3>Transparencia</h3>
-                <p>Datos en tiempo real y acceso a la información relevante de nuestra comunidad de voleibol.</p>
+        <div class="row mb-5">
+            <div class="col-md-12">
+                <div class="card shadow">
+                    <div class="card-header bg-primary text-light">
+                        <h4 class="mb-0">Registrar Nuevo Entrenador</h4>
+                    </div>
+                    <div class="card-body">
+                        <form id="frm_entrenador">
+                            <input type="hidden" id="entrenadorId" value="">
+                            
+                            <div class="row">
+                                <div class="col-md-4 mb-3">
+                                    <label for="cedula_e" class="form-label">Cédula</label>
+                                    <input type="text" class="form-control" id="cedula_e" required>
+                                </div>
+                                <div class="col-md-8 mb-3">
+                                    <label for="nombre_e" class="form-label">Nombre Completo</label>
+                                    <input type="text" class="form-control" id="nombre_e" required>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-4 mb-3">
+                                    <label for="nacimiento_e" class="form-label">Fecha de Nacimiento</label>
+                                    <input type="date" class="form-control" id="nacimiento_e" required>
+                                </div>
+                                <div class="col-md-4 mb-3">
+                                    <label for="nivel_e" class="form-label">Nivel/Categoría</label>
+                                    <select class="form-select" id="nivel_e" required>
+                                        <option value="">Seleccione Nivel</option>
+                                        <option value="Iniciacion">Iniciación</option>
+                                        <option value="Menores">Menores</option>
+                                        <option value="Adultos">Adultos</option>
+                                        <option value="Alto_Rendimiento">Alto Rendimiento</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-4 mb-3">
+                                    <label for="telefono_e" class="form-label">Teléfono</label>
+                                    <input type="text" class="form-control" id="telefono_e">
+                                </div>
+                            </div>
+                            <button type="submit" class="btn btn-primary" id="btn_guardar_e">
+                                <i class="fas fa-save"></i> Guardar Entrenador
+                            </button>
+                            <button type="button" class="btn btn-secondary" id="btn_cancelar_e" style="display:none;">
+                                Cancelar Edición
+                            </button>
+                            <span id="mensaje_e" class="ms-3 text-success"></span>
+                        </form>
+                    </div>
+                </div>
             </div>
         </div>
-    </section>
 
-    <section id="acerca-de" class="about-section">
-        <div class="container">
-            <h3>Nuestra Historia</h3>
-            <p>La Asociación de Voleibol del Estado Lara (AVEL) trabaja incansablemente por el desarrollo integral de la disciplina en la región. Desde el entrenamiento base hasta el alto rendimiento, nuestro foco es la **organización y la promoción** del talento larense.</p>
+        <div class="row">
+            <div class="col-md-12">
+                <h3 class="section-header">Listado de Entrenadores</h3>
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" id="filtro_e" placeholder="Buscar por Cédula o Nombre...">
+                    <button class="btn btn-outline-secondary" type="button" id="btn_limpiar_filtro_e">Limpiar</button>
+                </div>
+
+                <div class="table-responsive">
+                    <table class="table table-striped table-hover">
+                        <thead>
+                            <tr>
+                                <th data-column="cedula" onclick="sort_table('cedula', 'entrenadores')">Cédula</th>
+                                <th data-column="nombre" onclick="sort_table('nombre', 'entrenadores')">Nombre</th>
+                                <th data-column="nacimiento" onclick="sort_table('nacimiento', 'entrenadores')">Nacimiento</th>
+                                <th data-column="nivel" onclick="sort_table('nivel', 'entrenadores')">Nivel</th>
+                                <th>Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tabla_entrenadores">
+                            </tbody>
+                    </table>
+                </div>
+            </div>
         </div>
-    </section>
+    </main>
 
     <footer class="main-footer">
         <div class="container">
@@ -69,6 +150,11 @@
         </div>
     </footer>
     
+    <script src="https://kit.fontawesome.com/tu-clave-font-awesome.js" crossorigin="anonymous"></script> 
+    
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-firestore.js"></script>
+
     <script>
         window.accessDataAtletas = (event) => {
             event.preventDefault(); 
@@ -92,6 +178,7 @@
         };
     </script>
     
-    <script src="js/script.js"></script>
+    <script src="js/script.js"></script> 
+
 </body>
 </html>
