@@ -110,7 +110,7 @@ body {
 
 .logo img#mainLogo {
 
-    height: 200px; /* TAMAÑO SOLICITADO */
+    height: 150px; /* TAMAÑO SOLICITADO */
 
     width: auto;
 
@@ -130,7 +130,7 @@ body {
 
     font-weight: 600;
 
-    margin-left: 2px; /* Espacio entre el logo y el texto */
+    margin-left: 5px; /* Espacio entre el logo y el texto */
 
     line-height: 1.2; /* Para mejor ajuste vertical */
 
@@ -489,3 +489,4 @@ body {
     }
 
 }
+
