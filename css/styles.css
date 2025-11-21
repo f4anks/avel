@@ -1,12 +1,9 @@
-/* [Código CSS de la versión 60px Centrado] */
-/* ASEGÚRATE DE QUE TU ARCHIVO styles.css CONTENGA EXACTAMENTE ESTO */
-
 /* --- VARIABLES DE COLOR (Tema Azul Oscuro/Profesional con Vibrante) --- */
 :root {
-    --primary-color: #002D62;
-    --secondary-color: #1565C0;
-    --accent-color: #FFC107;
-    --vibrant-blue: #00BFFF;
+    --primary-color: #002D62; /* Azul Muy Oscuro (Fondo AVEL) */
+    --secondary-color: #1565C0; /* Azul Secundario */
+    --accent-color: #FFC107; /* Amarillo/Dorado (Acento) */
+    --vibrant-blue: #00BFFF; /* AZUL LLAMATIVO/CLARO (Sky Blue / Escandaloso) */
     --text-light: #FFFFFF;
     --text-dark: #212121;
     --bg-light: #F5F5F5;
@@ -42,9 +39,9 @@ body {
 
 .header-top {
     display: flex;
-    align-items: center; 
-    justify-content: center; /* CENTRADO HORIZONTAL */
-    padding: 5px 0; 
+    align-items: center; /* CENTRA VERTICALMENTE LOGO Y TEXTO */
+    justify-content: flex-start;
+    padding: 1px 0;  /* AJUSTADO a 1px */
     border-bottom: 1px solid rgba(255, 255, 255, 0.15);
 }
 
@@ -57,17 +54,17 @@ body {
 
 /* AJUSTE: ESTILO PARA LA IMAGEN DEL LOGO */
 .logo img#mainLogo {
-    height: 150px; /* TAMAÑO PEQUEÑO */
+    height: 150px; /* TAMAÑO SOLICITADO */
     width: auto;
     vertical-align: middle; 
 }
 
-/* ESTILO OCULTO: Título */
+/* NUEVO ESTILO: Título al lado del logo */
 .header-title {
-    color: var(--text-light); 
-    font-size: 2rem; 
+    color: var(--text-light); /* Color blanco */
+    font-size: 2.2rem; /* Tamaño grande para acompañar al logo */
     font-weight: 600;
-    margin-left: 10px; 
+    margin-left: 5px; /* Espacio entre el logo y el texto */
     line-height: 1.2; 
 }
 
@@ -107,7 +104,7 @@ body {
     color: var(--accent-color); 
 }
 
-/* --- SECCIÓN HERO y demás secciones ... --- */
+/* --- SECCIÓN HERO --- */
 
 .hero {
     background: var(--secondary-color); 
@@ -217,13 +214,14 @@ body {
 /* --- MEDIA QUERIES --- */
 @media (max-width: 768px) {
     .header-top {
+        /* Centramos el logo y el texto en móvil para evitar desbordamiento */
         justify-content: center; 
-        flex-direction: column; 
+        flex-direction: column; /* Apilamos logo y texto en móvil */
         padding: 10px 0;
     }
 
     .header-title {
-        font-size: 1.5rem; 
+        font-size: 1.5rem; /* Reducimos el tamaño en móvil */
         margin-left: 0;
         margin-top: 5px;
     }
