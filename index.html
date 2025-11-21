@@ -1,97 +1,95 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AVEL | Asociación de Voleibol del Estado Lara</title>
-    <link rel="stylesheet" href="css/styles.css"> 
-    <link rel="icon" type="image/x-icon" href="favicon.ico"> 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AVEL | Asociación de Voleibol del Estado Lara</title>
+    <link rel="stylesheet" href="css/styles.css"> 
+    <link rel="icon" type="image/x-icon" href="favicon.ico"> 
 </head>
 <body>
 
-    <header class="main-header">
-                <div class="container header-top">
-            <h1 class="logo">
-                <img src="img/logo_avel.PNG" alt="Logo AVEL" id="mainLogo">
-            </h1>
-            <span class="header-title">Liga de Voleibol del Estado Lara</span>
-        </div>
-    
-                <nav class="container header-bottom">
-            <ul class="nav-menu">
-                <li><a href="index.html" class="active">Inicio</a></li>
-                <li><a href="#ciar">CIAR</a></li>
-                                <li><a href="#" onclick="accessDataAtletas(event)">Data Atletas</a></li> 
-                <li><a href="data-entrenadores.html">Data Entrenadores</a></li>
-                <li><a href="#acerca-de">Acerca de</a></li>
-            </ul>
-        </nav>
-    </header>
+    <header class="main-header">
+        <div class="container header-top">
+            <div class="top-banner">
+                <img src="img/banner.png" alt="Banner Superior AVEL">
+            </div>
+        </div>
+        
+        <nav class="container header-bottom">
+            <ul class="nav-menu">
+                <li><a href="index.html" class="active">Inicio</a></li>
+                <li><a href="#ciar">CIAR</a></li>
+                <li><a href="#" onclick="accessDataAtletas(event)">Data Atletas</a></li> 
+                <li><a href="data-entrenadores.html">Data Entrenadores</a></li>
+                <li><a href="#acerca-de">Acerca de</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    <section class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <h2>El Corazón del Voleibol Larense</h2> 
-                
-                <p>Sé parte de la **Asociación de Voleibol del Estado Lara (AVEL)**. Impulsamos el desarrollo integral de atletas y la capacitación continua de entrenadores. Únete a la excelencia, disciplina y pasión que definen el futuro de nuestro deporte.</p>
-            </div>
-        </div>
-    </section>
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h2>El Corazón del Voleibol Larense</h2> 
+                <p>Sé parte de la **Asociación de Voleibol del Estado Lara (AVEL)**. Impulsamos el desarrollo integral de atletas y la capacitación continua de entrenadores. Únete a la excelencia, disciplina y pasión que definen el futuro de nuestro deporte.</p>
+            </div>
+        </div>
+    </section>
 
-    <section class="mision-vision">
-        <div class="container grid-3">
-            <div class="card">
-                <h3>Organización</h3>
-                <p>Gestionamos de manera eficiente la data de atletas y entrenadores para el desarrollo deportivo.</p>
-            </div>
-            <div class="card">
-                <h3>Visión</h3>
-                <p>Ser la asociación deportiva modelo a nivel nacional por nuestra gestión y éxito competitivo.</p>
-            </div>
-            <div class="card">
-                <h3>Transparencia</h3>
-                <p>Datos en tiempo real y acceso a la información relevante de nuestra comunidad de voleibol.</p>
-            </div>
-        </div>
-    </section>
+    <section class="mision-vision">
+        <div class="container grid-3">
+            <div class="card">
+                <h3>Organización</h3>
+                <p>Gestionamos de manera eficiente la data de atletas y entrenadores para el desarrollo deportivo.</p>
+            </div>
+            <div class="card">
+                <h3>Visión</h3>
+                <p>Ser la asociación deportiva modelo a nivel nacional por nuestra gestión y éxito competitivo.</p>
+            </div>
+            <div class="card">
+                <h3>Transparencia</h3>
+                <p>Datos en tiempo real y acceso a la información relevante de nuestra comunidad de voleibol.</p>
+            </div>
+        </div>
+    </section>
 
-    <section id="acerca-de" class="about-section">
-        <div class="container">
-            <h3>Nuestra Historia</h3>
-            <p>La Asociación de Voleibol del Estado Lara (AVEL) trabaja incansablemente por el desarrollo integral de la disciplina en la región. Desde el entrenamiento base hasta el alto rendimiento, nuestro foco es la **organización y la promoción** del talento larense.</p>
-        </div>
-    </section>
+    <section id="acerca-de" class="about-section">
+        <div class="container">
+            <h3>Nuestra Historia</h3>
+            <p>La Asociación de Voleibol del Estado Lara (AVEL) trabaja incansablemente por el desarrollo integral de la disciplina en la región. Desde el entrenamiento base hasta el alto rendimiento, nuestro foco es la **organización y la promoción** del talento larense.</p>
+        </div>
+    </section>
 
-    <footer class="main-footer">
-        <div class="container">
-            <p>&copy; 2025 AVEL. Todos los derechos reservados.</p>
-            <p class="copyright-info">Diseño y Sistema: Sistematikos - Frank Hernandez</p>
-        </div>
-    </footer>
-    
-    <script>
-        window.accessDataAtletas = (event) => {
-            event.preventDefault(); 
-            const requiredUser = "admin";
-            const requiredPass = "Volei2025";
-            
-            const user = prompt("Ingrese su Usuario:");
+    <footer class="main-footer">
+        <div class="container">
+            <p>&copy; 2025 AVEL. Todos los derechos reservados.</p>
+            <p class="copyright-info">Diseño y Sistema: Sistematikos - Frank Hernandez</p>
+        </div>
+    </footer>
+    
+    <script>
+        window.accessDataAtletas = (event) => {
+            event.preventDefault(); 
+            const requiredUser = "admin";
+            const requiredPass = "Volei2025";
+            
+            const user = prompt("Ingrese su Usuario:");
 
-            if (user === null || user.trim() !== requiredUser) {
-                alert("Usuario incorrecto o cancelado.");
-                return; 
-            }
+            if (user === null || user.trim() !== requiredUser) {
+                alert("Usuario incorrecto o cancelado.");
+                return; 
+            }
 
-            const password = prompt("Ingrese la Contraseña:");
+            const password = prompt("Ingrese la Contraseña:");
 
-            if (password === requiredPass) {
-                window.location.href = 'dataatletas/atletas_edit.html';
-            } else if (password !== null) {
-                alert("La contraseña es incorrecta");
-            }
-        };
-    </script>
-    
-    <script src="js/script.js"></script> 
+            if (password === requiredPass) {
+                window.location.href = 'dataatletas/atletas_edit.html';
+            } else if (password !== null) {
+                alert("La contraseña es incorrecta");
+            }
+        };
+    </script>
+    
+    <script src="js/script.js"></script> 
 </body>
 </html>
