@@ -39,6 +39,7 @@ body {
 
 .header-top {
     display: flex;
+    align-items: center; /* CENTRA VERTICALMENTE LOGO Y TEXTO */
     justify-content: flex-start;
     padding: 10px 0; 
     border-bottom: 1px solid rgba(255, 255, 255, 0.15);
@@ -53,9 +54,18 @@ body {
 
 /* AJUSTE: ESTILO PARA LA IMAGEN DEL LOGO */
 .logo img#mainLogo {
-    height: 150px; /* <= AUMENTADO: Logo más grande */
+    height: 150px; /* TAMAÑO SOLICITADO */
     width: auto;
     vertical-align: middle; 
+}
+
+/* NUEVO ESTILO: Título al lado del logo */
+.header-title {
+    color: var(--text-light); /* Color blanco */
+    font-size: 2.2rem; /* Tamaño grande para acompañar al logo */
+    font-weight: 600;
+    margin-left: 20px; /* Espacio entre el logo y el texto */
+    line-height: 1.2; /* Para mejor ajuste vertical */
 }
 
 .header-bottom {
@@ -204,7 +214,16 @@ body {
 /* --- MEDIA QUERIES --- */
 @media (max-width: 768px) {
     .header-top {
-        justify-content: center;
+        /* Centramos el logo y el texto en móvil para evitar desbordamiento */
+        justify-content: center; 
+        flex-direction: column; /* Apilamos logo y texto en móvil */
+        padding: 10px 0;
+    }
+
+    .header-title {
+        font-size: 1.5rem; /* Reducimos el tamaño en móvil */
+        margin-left: 0;
+        margin-top: 5px;
     }
 
     .header-bottom {
@@ -225,6 +244,3 @@ body {
         flex-direction: column;
     }
 }
-
-
-
