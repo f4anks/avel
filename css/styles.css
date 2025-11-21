@@ -41,7 +41,7 @@ body {
     display: flex;
     align-items: center; /* CENTRA VERTICALMENTE LOGO Y TEXTO */
     justify-content: flex-start;
-    padding: 1px 0;  /* <= AJUSTE PARA PEGAR AL BORDE SUPERIOR */
+    padding: 1px 0;  /* AJUSTE: Mínimo padding superior/inferior */
     border-bottom: 1px solid rgba(255, 255, 255, 0.15);
 }
 
@@ -54,7 +54,7 @@ body {
 
 /* AJUSTE: ESTILO PARA LA IMAGEN DEL LOGO */
 .logo img#mainLogo {
-    height: 200px; /* <= NUEVO TAMAÑO DEL LOGO: 200px */
+    height: 200px; /* TAMAÑO SOLICITADO */
     width: auto;
     vertical-align: middle; 
 }
@@ -214,14 +214,13 @@ body {
 /* --- MEDIA QUERIES --- */
 @media (max-width: 768px) {
     .header-top {
-        /* Centramos el logo y el texto en móvil para evitar desbordamiento */
         justify-content: center; 
-        flex-direction: column; /* Apilamos logo y texto en móvil */
+        flex-direction: column; 
         padding: 10px 0;
     }
 
     .header-title {
-        font-size: 1.5rem; /* Reducimos el tamaño en móvil */
+        font-size: 1.5rem; 
         margin-left: 0;
         margin-top: 5px;
     }
