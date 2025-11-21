@@ -40,15 +40,22 @@ body {
 .header-top {
     display: flex;
     justify-content: flex-start;
-    padding: 10px 0;
+    padding: 10px 0; /* Ajuste de altura */
     border-bottom: 1px solid rgba(255, 255, 255, 0.15);
 }
 
 .logo {
     font-size: 1.8rem;
-    color: var(--text-light);
+    color: var(--text-light); /* Texto que ahora es la imagen */
     font-weight: 700;
     margin: 0;
+}
+
+/* NUEVO: ESTILO PARA LA IMAGEN DEL LOGO */
+.logo img#mainLogo {
+    height: 35px; /* Altura del logo */
+    width: auto;
+    vertical-align: middle; /* Alineación vertical */
 }
 
 .header-bottom {
@@ -57,7 +64,7 @@ body {
     padding: 0;
 }
 
-/* --- MENÚ DE NAVEGACIÓN (AJUSTE DE ALTURA) --- */
+/* --- MENÚ DE NAVEGACIÓN --- */
 
 .nav-menu {
     list-style: none;
@@ -73,7 +80,7 @@ body {
 
 .nav-menu a {
     display: block; 
-    padding: 8px 10px; /* <= REDUCCIÓN DE ALTURA (de 12px a 8px) */
+    padding: 8px 10px; 
     color: var(--text-light); 
     text-decoration: none;
     font-size: 1rem;
@@ -141,10 +148,10 @@ body {
     background-color: rgba(255, 255, 255, 0.1);
 }
 
-/* --- SECCIÓN MISIÓN/VISIÓN (AJUSTE DE ALTURA) --- */
+/* --- SECCIÓN MISIÓN/VISIÓN --- */
 
 .mision-vision {
-    padding: 10px 0; /* <= ALTURA REDUCIDA (de 40px a 10px) */
+    padding: 20px 0; 
     text-align: center;
 }
 
@@ -156,14 +163,14 @@ body {
 .card {
     flex: 1;
     background: var(--text-light);
-    padding: 10px; /* <= ALTURA INTERNA REDUCIDA (de 20px a 10px) */
+    padding: 15px; 
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .card h3 {
     color: var(--primary-color);
-    margin-bottom: 5px; /* Ajustamos la separación del título */
+    margin-bottom: 5px; 
 }
 
 /* --- SECCIÓN ACERCA DE --- */
@@ -218,8 +225,3 @@ body {
         flex-direction: column;
     }
 }
-
-
-
-
-
