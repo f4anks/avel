@@ -454,3 +454,38 @@ body {
 
 
 
+    .header-bottom {
+
+        padding: 5px 0;
+
+    }
+
+
+
+    .nav-menu {
+
+        flex-direction: column;
+
+        width: 100%;
+
+    }
+
+
+
+    .nav-menu li {
+
+        min-width: 100%; 
+
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+
+    }
+
+    
+
+    .grid-3 {
+
+        flex-direction: column;
+
+    }
+
+}
