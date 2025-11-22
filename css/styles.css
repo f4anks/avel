@@ -57,7 +57,7 @@ body {
     height: auto; 
     /* MODIFICACIÓN: Aumento de la altura máxima para el banner */
     max-height: 150px; /* Aumentado de 120px a 150px para más altura */
-    width: 90%; /* Asegura que la imagen ocupe todo el ancho posible */
+    width: 100%; /* Asegura que la imagen ocupe todo el ancho posible */
     object-fit: cover; /* Recorta la imagen para que cubra el área sin distorsión */
     display: block; 
     margin: 0 auto; 
@@ -232,5 +232,6 @@ body {
         flex-direction: column;
     }
 }
+
 
 
