@@ -48,16 +48,17 @@ body {
 
 /* NUEVO ESTILO: Contenedor del banner superior */
 .top-banner {
-    width: 100%; 
+    width: 80%; 
     text-align: center; 
 }
 
 .top-banner img {
-    max-width: 100%; 
+    max-width: 180%; 
     height: auto; 
     /* MODIFICACIÓN: Aumento de la altura máxima para el banner */
-    max-height: 120px; 
-    width: auto; 
+    max-height: 150px; /* Aumentado de 120px a 150px para más altura */
+    width: 100%; /* Asegura que la imagen ocupe todo el ancho posible */
+    object-fit: cover; /* Recorta la imagen para que cubra el área sin distorsión */
     display: block; 
     margin: 0 auto; 
 }
@@ -231,6 +232,3 @@ body {
         flex-direction: column;
     }
 }
-
-
-
